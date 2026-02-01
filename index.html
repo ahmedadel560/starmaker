@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Star Maker - Your trusted computer store for PCs, laptops, parts, and maintenance services in Al-Awah Center">
+    <title>⭐ Star Maker - Computer Store & Maintenance</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <span class="logo">⭐</span>
+                <span class="brand-name" data-en="Star Maker" data-ar="ستار ميكر">Star Maker</span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="#products" class="nav-link" data-en="Products" data-ar="المنتجات">Products</a></li>
+                <li><a href="#maintenance" class="nav-link" data-en="Maintenance" data-ar="الصيانة">Maintenance</a></li>
+                <li><a href="#booking" class="nav-link" data-en="Book Service" data-ar="احجز خدمة">Book Service</a></li>
+                <li><a href="#reviews" class="nav-link" data-en="Reviews" data-ar="التقييمات">Reviews</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-ar="من نحن">About</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <button class="icon-btn lang-toggle" id="langToggle" aria-label="Toggle language">
+                    <span class="lang-text">AR</span>
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">
+                    <span class="hero-emoji">⭐</span>
+                    <span data-en="Star Maker" data-ar="ستار ميكر">Star Maker</span>
+                </h1>
+                <p class="hero-subtitle" data-en="Your Trusted Computer Store" data-ar="متجرك الموثوق للكمبيوتر">Your
+                    Trusted Computer Store</p>
+                <p class="hero-description"
+                    data-en="Premium computers, laptops, parts & professional maintenance services at unbeatable prices"
+                    data-ar="أجهزة كمبيوتر متميزة، لابتوبات، قطع غيار وخدمات صيانة احترافية بأسعار لا تقبل المنافسة">
+                    Premium computers, laptops, parts & professional maintenance services at unbeatable prices</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary" data-en="Browse Products" data-ar="تصفح المنتجات">Browse
+                        Products</a>
+                    <a href="#booking" class="btn btn-outline" data-en="Book Maintenance" data-ar="احجز صيانة">Book
+                        Maintenance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products-section" id="products">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Our Products" data-ar="منتجاتنا">Our Products</h2>
+            <p class="section-subtitle fade-in" data-en="Unbeatable prices on premium computers and accessories"
+                data-ar="أسعار لا تقبل المنافسة على أجهزة كمبيوتر وإكسسوارات متميزة">Unbeatable prices on premium
+                computers and accessories</p>
+
+            <!-- Complete Computers -->
+            <div class="product-category fade-in">
+                <h3 class="category-title" data-en="💻 Complete Computers" data-ar="💻 أجهزة كمبيوتر كاملة">💻 Complete
+                    Computers</h3>
+                <div class="product-grid" id="computers-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Laptops -->
+            <div class="product-category fade-in">
+                <h3 class="category-title" data-en="💼 Laptops" data-ar="💼 لابتوبات">💼 Laptops</h3>
+                <div class="product-grid" id="laptops-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Spare Parts -->
+            <div class="product-category fade-in">
+                <h3 class="category-title" data-en="🧩 Spare Parts" data-ar="🧩 قطع الغيار">🧩 Spare Parts</h3>
+                <div class="product-grid" id="parts-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Accessories -->
+            <div class="product-category fade-in">
+                <h3 class="category-title" data-en="🖨️ Accessories" data-ar="🖨️ الإكسسوارات">🖨️ Accessories</h3>
+                <div class="product-grid" id="accessories-grid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section class="section maintenance-section" id="maintenance">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Maintenance Services" data-ar="خدمات الصيانة">Maintenance
+                Services</h2>
+            <p class="section-subtitle fade-in" data-en="Professional repair and maintenance with warranty"
+                data-ar="إصلاح وصيانة احترافية مع ضمان">Professional repair and maintenance with warranty</p>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title" data-en="Hardware Maintenance" data-ar="صيانة الهاردوير">Hardware
+                        Maintenance</h3>
+                    <ul class="service-list">
+                        <li data-en="Desktop Computer Repair" data-ar="إصلاح الكمبيوتر المكتبي">Desktop Computer Repair
+                        </li>
+                        <li data-en="Laptop Maintenance" data-ar="صيانة اللابتوب">Laptop Maintenance</li>
+                        <li data-en="Parts Replacement" data-ar="استبدال القطع">Parts Replacement</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">💿</div>
+                    <h3 class="service-title" data-en="Software Maintenance" data-ar="صيانة السوفتوير">Software
+                        Maintenance</h3>
+                    <ul class="service-list">
+                        <li data-en="Windows Installation" data-ar="تثبيت ويندوز">Windows Installation</li>
+                        <li data-en="Driver Updates" data-ar="تحديث التعريفات">Driver Updates</li>
+                        <li data-en="Virus Removal" data-ar="إزالة الفيروسات">Virus Removal</li>
+                        <li data-en="Device Optimization" data-ar="تحسين أداء الجهاز">Device Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in warranty">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="service-title" data-en="Warranty & Inspection" data-ar="الضمان والفحص">Warranty &
+                        Inspection</h3>
+                    <ul class="service-list">
+                        <li data-en="Maintenance Warranty" data-ar="ضمان الصيانة">Maintenance Warranty</li>
+                        <li data-en="Pre-Repair Inspection" data-ar="فحص قبل الإصلاح">Pre-Repair Inspection</li>
+                        <li data-en="Post-Repair Inspection" data-ar="فحص بعد الإصلاح">Post-Repair Inspection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section booking-section" id="booking">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Book Maintenance Service" data-ar="احجز خدمة الصيانة">Book
+                Maintenance Service</h2>
+            <p class="section-subtitle fade-in" data-en="Fill out the form and we'll contact you shortly"
+                data-ar="املأ النموذج وسنتصل بك قريباً">Fill out the form and we'll contact you shortly</p>
+
+            <form class="booking-form fade-in" id="bookingForm">
+                <div class="form-group">
+                    <label for="customerName" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                    <input type="text" id="customerName" name="customerName" required placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone" data-en="Mobile Number" data-ar="رقم الموبايل">Mobile Number</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" required placeholder="01XXXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="deviceType" data-en="Device Type" data-ar="نوع الجهاز">Device Type</label>
+                    <select id="deviceType" name="deviceType" required>
+                        <option value="" data-en="Select device type" data-ar="اختر نوع الجهاز">Select device type
+                        </option>
+                        <option value="desktop" data-en="Desktop Computer" data-ar="كمبيوتر مكتبي">Desktop Computer
+                        </option>
+                        <option value="laptop" data-en="Laptop" data-ar="لابتوب">Laptop</option>
+                        <option value="other" data-en="Other" data-ar="آخر">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="problem" data-en="Problem Description" data-ar="وصف المشكلة">Problem Description</label>
+                    <textarea id="problem" name="problem" rows="4" required placeholder=""></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointmentTime" data-en="Preferred Appointment Time"
+                        data-ar="وقت الموعد المفضل">Preferred Appointment Time</label>
+                    <input type="datetime-local" id="appointmentTime" name="appointmentTime" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit" data-en="Submit Booking"
+                    data-ar="إرسال الحجز">Submit Booking</button>
+            </form>
+
+            <div class="booking-success" id="bookingSuccess" style="display: none;">
+                <div class="success-icon">✅</div>
+                <h3 data-en="Booking Received!" data-ar="تم استلام الحجز!">Booking Received!</h3>
+                <p data-en="Thank you! We will contact you soon to confirm your appointment."
+                    data-ar="شكراً لك! سنتصل بك قريباً لتأكيد موعدك.">Thank you! We will contact you soon to confirm
+                    your appointment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Customer Reviews" data-ar="تقييمات العملاء">Customer Reviews</h2>
+            <p class="section-subtitle fade-in" data-en="What our customers say about us"
+                data-ar="ما يقوله عملاؤنا عنا">What our customers say about us</p>
+
+            <div class="reviews-grid">
+                <div class="review-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text"
+                        data-en="Excellent service and fast maintenance. I recommend dealing with them."
+                        data-ar="خدمة ممتازة وصيانة سريعة. أنصح بالتعامل معهم.">Excellent service and fast maintenance.
+                        I recommend dealing with them.</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">👤</div>
+                        <div class="reviewer-info">
+                            <p class="reviewer-name" data-en="Ahmed Mahmoud" data-ar="أحمد محمود">Ahmed Mahmoud</p>
+                            <p class="reviewer-date" data-en="Customer" data-ar="عميل">Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text" data-en="Good prices and respectful service, especially for laptop repairs."
+                        data-ar="أسعار جيدة وخدمة محترمة، خاصة إصلاح اللابتوب.">Good prices and respectful service,
+                        especially for laptop repairs.</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">👤</div>
+                        <div class="reviewer-info">
+                            <p class="reviewer-name" data-en="Muhammad Ali" data-ar="محمد علي">Muhammad Ali</p>
+                            <p class="reviewer-date" data-en="Customer" data-ar="عميل">Customer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text"
+                        data-en="Professional team and quality products. Best computer store in the area!"
+                        data-ar="فريق محترف ومنتجات عالية الجودة. أفضل متجر كمبيوتر في المنطقة!">Professional team and
+                        quality products. Best computer store in the area!</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">👤</div>
+                        <div class="reviewer-info">
+                            <p class="reviewer-name" data-en="Sarah Hassan" data-ar="سارة حسن">Sarah Hassan</p>
+                            <p class="reviewer-date" data-en="Customer" data-ar="عميل">Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <h2 class="section-title" data-en="About Star Maker" data-ar="عن ستار ميكر">About Star Maker</h2>
+                <p class="about-text"
+                    data-en="Star Maker is your trusted destination for all computer needs. Located in Al-Awah Center, we offer premium computers, laptops, spare parts, and accessories at unbeatable prices. Our professional maintenance team provides top-quality repair services with warranty. Whether you're a student, gamer, professional, or business owner, we have the perfect solution for you."
+                    data-ar="ستار ميكر هو وجهتك الموثوقة لجميع احتياجات الكمبيوتر. نقع في مركز الأواه، ونقدم أجهزة كمبيوتر ولابتوبات وقطع غيار وإكسسوارات متميزة بأسعار لا تقبل المنافسة. يقدم فريق الصيانة المحترف لدينا خدمات إصلاح عالية الجودة مع ضمان. سواء كنت طالباً أو لاعباً أو محترفاً أو صاحب عمل، لدينا الحل المثالي لك.">
+                    Star Maker is your trusted destination for all computer needs. Located in Al-Awah Center, we offer
+                    premium computers, laptops, spare parts, and accessories at unbeatable prices. Our professional
+                    maintenance team provides top-quality repair services with warranty. Whether you're a student,
+                    gamer, professional, or business owner, we have the perfect solution for you.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">💎</div>
+                        <h4 data-en="Premium Quality" data-ar="جودة متميزة">Premium Quality</h4>
+                        <p data-en="Top brands and tested products" data-ar="علامات تجارية رائدة ومنتجات مجربة">Top
+                            brands and tested products</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">💰</div>
+                        <h4 data-en="Best Prices" data-ar="أفضل الأسعار">Best Prices</h4>
+                        <p data-en="Unbeatable competitive prices" data-ar="أسعار تنافسية لا تقبل المنافسة">Unbeatable
+                            competitive prices</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h4 data-en="Warranty" data-ar="الضمان">Warranty</h4>
+                        <p data-en="Full warranty on all products" data-ar="ضمان شامل على جميع المنتجات">Full warranty
+                            on all products</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h4 data-en="Fast Service" data-ar="خدمة سريعة">Fast Service</h4>
+                        <p data-en="Quick maintenance and delivery" data-ar="صيانة وتوصيل سريع">Quick maintenance and
+                            delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+            <p class="section-subtitle fade-in" data-en="Visit us or get in touch" data-ar="قم بزيارتنا أو تواصل معنا">
+                Visit us or get in touch</p>
+
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📍</div>
+                    <h3 data-en="Location" data-ar="الموقع">Location</h3>
+                    <p data-en="Al-Awah Center" data-ar="مركز الأواه">Al-Awah Center</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📞</div>
+                    <h3 data-en="Phone" data-ar="الهاتف">Phone</h3>
+                    <a href="tel:01146294772" class="contact-link">01146294772</a>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">💬</div>
+                    <h3 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h3>
+                    <a href="https://wa.me/201146294772" class="contact-link" target="_blank">Chat on WhatsApp</a>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📘</div>
+                    <h3 data-en="Facebook" data-ar="فيسبوك">Facebook</h3>
+                    <a href="https://www.facebook.com/StarMakerComputer" class="contact-link" target="_blank">Follow
+                        us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 <span data-en="Star Maker - All Rights Reserved"
+                        data-ar="ستار ميكر - جميع الحقوق محفوظة">Star Maker - All Rights Reserved</span></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/StarMakerComputer" target="_blank" aria-label="Facebook">📘</a>
+                    <a href="https://wa.me/201146294772" target="_blank" aria-label="WhatsApp">💬</a>
+                    <a href="tel:01146294772" aria-label="Phone">📞</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3 data-en="Shopping Cart" data-ar="سلة التسوق">Shopping Cart</h3>
+                <button class="cart-close" id="cartClose">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <div class="empty-icon">🛒</div>
+                    <p data-en="Your cart is empty" data-ar="سلتك فارغة">Your cart is empty</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span data-en="Total:" data-ar="الإجمالي:">Total:</span>
+                    <span id="cartTotal">0 <span data-en="EGP" data-ar="جنيه">EGP</span></span>
+                </div>
+                <button class="btn btn-primary btn-checkout" data-en="Checkout (WhatsApp)"
+                    data-ar="إتمام الطلب (واتساب)">Checkout (WhatsApp)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Trigger (Secret Button) -->
+    <a href="admin.html" id="adminTrigger"
+        style="position: fixed; bottom: 0; right: 0; width: 30px; height: 30px; z-index: 9999; cursor: default;"
+        aria-label="Admin Access"></a>
+
+    <!-- JavaScript -->
+    <!-- Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/script.js?v=102"></script>
+</body>
+
+</html>
